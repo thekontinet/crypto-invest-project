@@ -31,11 +31,11 @@
                         <div class="user-card-wrap">
                             <div class="user-card">
                                 <div class="user-avatar">
-                                    <span>AB</span>
+                                    <span>{{substr(auth()->user()->name, 0, 1)}}</span>
                                 </div>
                                 <div class="user-info">
-                                    <span class="lead-text">Abu Bin Ishtiyak</span>
-                                    <span class="sub-text">info@softnio.com</span>
+                                    <span class="lead-text">{{auth()->user()->name}}</span>
+                                    <span class="sub-text">{{auth()->user()->email}}</span>
                                 </div>
                                 <div class="user-action">
                                     <em class="icon ni ni-chevron-down"></em>
@@ -47,41 +47,21 @@
                         <div class="user-account-info between-center">
                             <div class="user-account-main">
                                 <h6 class="overline-title-alt">Available Balance</h6>
-                                <div class="user-balance">2.014095 <small class="currency currency-btc">BTC</small></div>
-                                <div class="user-balance-alt">18,934.84 <span class="currency currency-btc">BTC</span></div>
+                                <div class="user-balance">{{auth()->user()->wallet->balance->format()}}</div>
+                                <div class="user-balance-alt">{{auth()->user()->wallet->balance->currencyFormat()}}</div>
                             </div>
-                            <a href="#" class="btn btn-icon btn-light"><em class="icon ni ni-line-chart"></em></a>
+                            <a href="{{route('invest.index')}}" class="btn btn-icon btn-light"><em class="icon ni ni-line-chart"></em></a>
                         </div>
-                        <ul class="user-account-data">
-                            <li>
-                                <div class="user-account-label">
-                                    <span class="sub-text">Profits (7d)</span>
-                                </div>
-                                <div class="user-account-value">
-                                    <span class="lead-text">+ 0.0526 <span class="currency currency-btc">BTC</span></span>
-                                    <span class="text-success ms-2">3.1% <em class="icon ni ni-arrow-long-up"></em></span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="user-account-label">
-                                    <span class="sub-text">Deposit in orders</span>
-                                </div>
-                                <div class="user-account-value">
-                                    <span class="sub-text text-base">0.005400 <span class="currency currency-btc">BTC</span></span>
-                                </div>
-                            </li>
-                        </ul>
                         <ul class="user-account-links">
-                            <li><a href="#" class="link"><span>Withdraw Funds</span> <em class="icon ni ni-wallet-out"></em></a></li>
-                            <li><a href="#" class="link"><span>Deposit Funds</span> <em class="icon ni ni-wallet-in"></em></a></li>
+                            <li><a href="{{route('transact', 'send')}}" class="link"><span>Withdraw Funds</span> <em class="icon ni ni-wallet-out"></em></a></li>
+                            <li><a href="{{route('transact', 'recieve')}}" class="link"><span>Deposit Funds</span> <em class="icon ni ni-wallet-in"></em></a></li>
                         </ul>
                         <ul class="link-list">
-                            <li><a href="html/crypto/profile.html"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                            <li><a href="html/crypto/profile-security.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
-                            <li><a href="html/crypto/profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
+                            <li><a href="{{route('profile.edit')}}"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                            <li><a href="{{route('profile.edit')}}"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
                         </ul>
                         <ul class="link-list">
-                            <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                            <li><button class="btn" form="logout-form"><em class="icon ni ni-signout"></em><span>Sign out</span></button></li>
                         </ul>
                     </div>
                 </div><!-- .nk-sidebar-widget -->
