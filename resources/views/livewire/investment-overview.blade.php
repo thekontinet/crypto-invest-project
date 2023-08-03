@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="invest-ov gy-2">
+                    {{-- <div class="invest-ov gy-2">
                         <div class="subtitle">Investment in this Month</div>
                         <div class="invest-ov-details">
                             <div class="invest-ov-info">
@@ -52,7 +52,7 @@
                                 <div class="title">Plans</div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

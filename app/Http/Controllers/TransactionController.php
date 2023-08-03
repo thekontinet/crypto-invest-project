@@ -29,7 +29,7 @@ class TransactionController extends Controller
         if(
             !($transaction->status->isPending() &&
             $transaction->address)
-        ) abort(404);
+        ) return to_route('dashboard')->with('message', 'transaction confirmed');
 
         $imgURL = \SimpleSoftwareIO\QrCode\Facades\QrCode::size(350)
             ->generate($transaction->address);
