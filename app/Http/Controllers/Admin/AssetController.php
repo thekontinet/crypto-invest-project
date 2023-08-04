@@ -48,10 +48,7 @@ class AssetController extends Controller
         $data = $request->validate(
             [
                 'asset' => ['required', 'exists:assets,id', 'exclude'],
-                'address' => ['required', 'regex:/^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$/']
-            ],
-            [
-                'address.regex' => 'Invalid wallet address provided'
+                'address' => ['required']
             ]
         );
 
