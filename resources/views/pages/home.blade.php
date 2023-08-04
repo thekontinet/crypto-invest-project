@@ -19,11 +19,14 @@
     <meta property="og:url" content="{{ url('/') }}">
     <meta property="og:description" content="Welcome to {{ config('app.name') }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/ui_assets/images/og.png">
+    <meta property="og:image" content="/favicon./apple-touch-icon.png">
 
 
 
-    <link rel="shortcut icon" href="/ui_assets/images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon./favicon-16x16.png">
+    <link rel="manifest" href="/favicon./site.webmanifest">
 
     <link rel="stylesheet" href="/ui_assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/ui_assets/css/aos.css">
@@ -1263,9 +1266,7 @@
                     <div class="row gy-5 gx-4">
                         <div class="col-md-6">
                             <div class="footer__about">
-                                <a href="index.html" class="footer__about-logo">
-                                    <x-application-logo/>
-                                </a>
+                                <h1 class="text-white">{{config('app.name')}}</h1>
                                 <p class="footer__about-moto">Welcome to {{ config('app.name') }} - Your Gateway to
                                     Crypto Investment Success! We provide a secure and user-friendly platform to invest
                                     in cryptocurrencies. Our automated portfolio management and expert insights help you
@@ -1361,6 +1362,7 @@
     <script src="/ui_assets/js/aos.js"></script>
     <script src="/ui_assets/js/fslightbox.js"></script>
     <script src="/ui_assets/js/purecounter_vanilla.js"></script>
+    <script src="{{env('APP_LIVE_CHAT_URL')}}" async></script>
 
 
 
