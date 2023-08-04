@@ -1,37 +1,1372 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" data-bs-theme="light">
 
-        <title>Laravel</title>
+<head>
+    <title>{{ config('app.name') }} - Professional Forex, and Stocks Trading Platform </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <!-- Sites meta Data -->
+    <meta name="application-name" content="{{ config('app.name') }} - Professional Forex, and Stocks Trading Platform">
+    <meta name="author" content="{{ config('app.name') }}">
+    <meta name="keywords" content="Bitrader, Crypto, Forex, and Stocks Trading Business">
+    <meta name="description" content="Professional Forex, and Stocks Trading Platform">
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+    <!-- OG meta data -->
+    <meta property="og:title" content="{{ config('app.name') }} - Professional Forex, and Stocks Trading Platform">
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:description" content="Welcome to {{ config('app.name') }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/ui_assets/images/og.png">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
+
+
+    <link rel="shortcut icon" href="/ui_assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/ui_assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ui_assets/css/aos.css">
+    <link rel="stylesheet" href="/ui_assets/css/all.min.css">
+
+    <link rel="stylesheet" href="/ui_assets/css/swiper-bundle.min.css">
+
+
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="/ui_assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ===============>> Preloader start here <<================= -->
+    <div class="preloader">
+        <img src="/images/logo.png" alt="preloader icon">
+    </div>
+    <!-- ===============>> Preloader end here <<================= -->
+
+
+
+    <!-- ===============>> light&dark switch start here <<================= -->
+    <div class="lightdark-switch">
+        <span class="dark-btn" id="btnSwitch"><img src="/ui_assets/images/icon/moon.svg" alt="light-dark-switchbtn"
+                class="swtich-icon"></span>
+    </div>
+    <!-- ===============>> light&dark switch start here <<================= -->
+
+
+
+
+
+    <!-- ===============>> Header section start here <<================= -->
+    <header class="header-section header-section--style2">
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <x-application-logo/>
+                    </div>
+                    <div class="menu-area">
+                        <ul class="menu menu--style1">
+                            {{-- <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="#0">Services</a>
+              </li> --}}
+                        </ul>
+
+                    </div>
+                    <div class="header-action">
+                        <div class="menu-area">
+                            <div class="header-btn">
+                                <a href="{{route('register')}}" class="trk-btn trk-btn--border trk-btn--primary">
+                                    <span>Join Now</span>
+                                </a>
+                                <a href="{{route('login')}}" class="trk-btn trk-btn--border trk-btn--secondary">
+                                    <span>Login</span>
+                                </a>
+                            </div>
+
+                            <!-- toggle icons -->
+                            <div class="header-bar d-lg-none header-bar--style1">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            @endif
-
-            <h1 style="font-size: 45px">In Progress...</h1>
+            </div>
         </div>
-    </body>
+    </header>
+    <!-- ===============>> Header section end here <<================= -->
+
+
+
+
+
+    <!-- ===============>> Banner section start here <<================= -->
+    <section class="banner banner--style1">
+        <div class="banner__bg">
+            <div class="banner__bg-element">
+                <img src="/ui_assets/images/banner/home1/bg.png" alt="section-bg-element"
+                    class="dark d-none d-lg-block">
+                <span class="bg-color d-lg-none"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="banner__wrapper">
+                <div class="row gy-5 gx-4">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="banner__content" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="banner__content-coin">
+                                <img src="/ui_assets/images/banner/home1/3.png" alt="coin icon">
+                            </div>
+                            <h1 class="banner__content-heading">
+                                We Invest Solely
+                                in <span>Disruptive Innovations</span>
+                            </h1>
+                            <p class="banner__content-moto">For investors seeking long-term growth.</p>
+                            <div class="banner__btn-group btn-group">
+                                <a href="{{ route('register') }}" class="trk-btn trk-btn--primary trk-btn--arrow">
+                                    GetStarted
+                                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="banner__thumb" data-aos="fade-left" data-aos-duration="1000">
+                            <img src="/ui_assets/images/banner/home1/1.png" alt="banner-thumb" class="dark">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner__shape">
+            <span class="banner__shape-item banner__shape-item--1">
+                <img src="/ui_assets/images/banner/home1/4.png" alt="shape icon">
+            </span>
+        </div>
+
+    </section>
+    <!-- ===============>> Banner section end here <<================= -->
+
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [{
+                        "proName": "FOREXCOM:SPXUSD",
+                        "title": "S&P 500"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100"
+                    },
+                    {
+                        "proName": "FX_IDC:EURUSD",
+                        "title": "EUR to USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:BTCUSD",
+                        "title": "Bitcoin"
+                    },
+                    {
+                        "proName": "BITSTAMP:ETHUSD",
+                        "title": "Ethereum"
+                    }
+                ],
+                "showSymbolLogo": true,
+                "colorTheme": "light",
+                "isTransparent": true,
+                "displayMode": "adaptive",
+                "locale": "en"
+            }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+
+
+    <!-- ===============>> About section start here <<================= -->
+    <section class="about about--style1 ">
+        <div class="container">
+            <div class="about__wrapper">
+                <div class="row gx-5  gy-4 gy-sm-0  align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about__thumb pe-lg-5" data-aos="fade-right" data-aos-duration="800">
+                            <div class="about__thumb-inner">
+                                <div class="about__thumb-image floating-content">
+                                    <img class="dark" src="/ui_assets/images/about/1.png" alt="about-image">
+                                    <div class="floating-content__top-left">
+                                        <div class="floating-content__item">
+                                            <h3> <span class="purecounter" data-purecounter-start="0"
+                                                    data-purecounter-end="10">30</span>
+                                                Years
+                                            </h3>
+                                            <p>Consulting Experience</p>
+                                        </div>
+                                    </div>
+                                    <div class="floating-content__bottom-right">
+                                        <div class="floating-content__item">
+                                            <h3> <span class="purecounter" data-purecounter-start="0"
+                                                    data-purecounter-end="25">25K</span>K+
+                                            </h3>
+                                            <p>Satisfied Customers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about__content" data-aos="fade-left" data-aos-duration="800">
+                            <div class="about__content-inner">
+                                <h2>Why <span>{{ config('app.name') }}</span></h2>
+
+                                <p class="mb-0">
+                                    ARK identifies more innovation evolving today than ever before. We believe it is
+                                    changing lives and businesses across the globe dramatically, creating opportunities
+                                    to own the next big thing by investing in the future today.
+                                </p>
+                                <a href="{{ route('register') }}" class="trk-btn trk-btn--border trk-btn--primary">
+                                    Join us Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===============>> About section start here <<================= -->
+
+
+
+
+    <!-- ===============>> feature section start here <<================= -->
+    <section class="feature feature--style1 padding-bottom padding-top bg-color">
+        <div class="container">
+            <div class="feature__wrapper">
+                <div class="row g-5 align-items-center justify-content-between">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="feature__content" data-aos="fade-right" data-aos-duration="800">
+                            <div class="feature__content-inner">
+                                <div class="section-header">
+                                    <h2 class="mb-15 mt-minus-5"> <span>benefits </span>We offer</h2>
+                                    <p class="mb-0">
+                                        Unlock the full potential of our platform with our amazing features and
+                                        top-notch.
+                                    </p>
+                                </div>
+
+                                <div class="feature__nav">
+                                    <div class="nav nav--feature flex-column nav-pills" id="feat-pills-tab"
+                                        role="tablist" aria-orientation="vertical">
+                                        <div class="nav-link active" id="feat-pills-one-tab" data-bs-toggle="pill"
+                                            data-bs-target="#feat-pills-one" role="tab"
+                                            aria-controls="feat-pills-one" aria-selected="true">
+                                            <div class="feature__item">
+                                                <div class="feature__item-inner">
+                                                    <div class="feature__item-content">
+                                                        <h6>Profitable Investment Solution</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nav-link" id="feat-pills-two-tab" data-bs-toggle="pill"
+                                            data-bs-target="#feat-pills-two" role="tab"
+                                            aria-controls="feat-pills-two" aria-selected="false">
+                                            <div class="feature__item">
+                                                <div class="feature__item-inner">
+                                                    <div class="feature__item-content">
+                                                        <h6>more Security and control over money from the rest</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="nav-link" id="feat-pills-three-tab" data-bs-toggle="pill"
+                                            data-bs-target="#feat-pills-three" role="tab"
+                                            aria-controls="feat-pills-three" aria-selected="false">
+                                            <div class="feature__item">
+                                                <div class="feature__item-inner">
+                                                    <div class="feature__item-content">
+                                                        <h6>Mobile payment is more flexible and easy for all investors
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nav-link" id="feat-pills-four-tab" data-bs-toggle="pill"
+                                            data-bs-target="#feat-pills-four" role="tab"
+                                            aria-controls="feat-pills-four" aria-selected="false">
+                                            <div class="feature__item">
+                                                <div class="feature__item-inner">
+                                                    <div class="feature__item-content">
+                                                        <h6>all transaction is kept free for all investors
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="feature__thumb pt-5 pt-md-0" data-aos="fade-left" data-aos-duration="800">
+                            <div class="feature__thumb-inner">
+                                <div class="tab-content" id="feat-pills-tabContent">
+                                    <div class="tab-pane fade show active" id="feat-pills-one" role="tabpanel"
+                                        aria-labelledby="feat-pills-one-tab" tabindex="0">
+                                        <div class="feature__image floating-content">
+                                            <img src="/ui_assets/images/feature/1.png" alt="Feature image">
+                                            <div class="floating-content__top-right floating-content__top-right--style2"
+                                                data-aos="fade-left" data-aos-duration="1000">
+                                                <div
+                                                    class="floating-content__item floating-content__item--style2 text-center">
+                                                    <img src="/ui_assets/images/feature/5.png" alt="rating">
+                                                    <p class="style2">Interest Rate For Loan</p>
+                                                </div>
+                                            </div>
+                                            <div class="floating-content__bottom-left floating-content__bottom-left--style2"
+                                                data-aos="fade-left" data-aos-duration="1000">
+                                                <div
+                                                    class="floating-content__item floating-content__item--style3  d-flex align-items-center">
+                                                    <h3 class="style2"> <span class="purecounter"
+                                                            data-purecounter-start="0"
+                                                            data-purecounter-end="10">10M</span>M
+                                                    </h3>
+                                                    <p class="ms-3 style2">Available for loan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="feat-pills-two" role="tabpanel"
+                                        aria-labelledby="feat-pills-two-tab" tabindex="0">
+                                        <div class="feature__image floating-content">
+                                            <img src="/ui_assets/images/feature/2.png" alt="Feature image">
+                                            <div class="floating-content__top-right floating-content__top-right--style2"
+                                                data-aos="fade-left" data-aos-duration="1000">
+                                                <div
+                                                    class="floating-content__item floating-content__item--style2 text-center">
+                                                    <img src="/ui_assets/images/feature/6.png" alt="rating">
+                                                    <p class="style2">Interest Rate For Loan</p>
+                                                </div>
+                                            </div>
+                                            <div class="floating-content__bottom-left floating-content__bottom-left--style2"
+                                                data-aos="fade-left" data-aos-duration="1000">
+                                                <div
+                                                    class="floating-content__item floating-content__item--style3  d-flex align-items-center">
+                                                    <h3 class="style2"> <span class="purecounter"
+                                                            data-purecounter-start="0"
+                                                            data-purecounter-end="18">10M</span>M
+                                                    </h3>
+                                                    <p class="ms-3 style2">Available for loan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="feat-pills-three" role="tabpanel"
+                                        aria-labelledby="feat-pills-three-tab" tabindex="0">
+                                        <div class="feature__image floating-content">
+                                            <img src="/ui_assets/images/feature/1.png" alt="Feature image">
+                                            <div class="floating-content__top-right floating-content__top-right--style2"
+                                                data-aos="fade-left" data-aos-duration="1000">
+                                                <div
+                                                    class="floating-content__item floating-content__item--style2 text-center">
+                                                    <img src="/ui_assets/images/feature/7.png" alt="rating">
+                                                    <p class="style2">Interest Rate For Loan</p>
+                                                </div>
+                                            </div>
+                                            <div class="floating-content__bottom-left floating-content__bottom-left--style2"
+                                                data-aos="fade-left" data-aos-duration="1000">
+                                                <div
+                                                    class="floating-content__item floating-content__item--style3  d-flex align-items-center">
+                                                    <h3 class="style2"> <span class="purecounter"
+                                                            data-purecounter-start="0"
+                                                            data-purecounter-end="30">10M</span>M
+                                                    </h3>
+                                                    <p class="ms-3 style2">Available for loan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="feat-pills-four" role="tabpanel"
+                                        aria-labelledby="feat-pills-four-tab" tabindex="0">
+                                        <div class="feature__image floating-content">
+                                            <img src="/ui_assets/images/feature/2.png" alt="Feature image">
+                                            <div class="floating-content__top-right floating-content__top-right--style2"
+                                                data-aos="fade-left" data-aos-duration="1000">
+                                                <div
+                                                    class="floating-content__item floating-content__item--style2 text-center">
+                                                    <img src="/ui_assets/images/feature/8.png" alt="rating">
+                                                    <p class="style2">Interest Rate For Loan</p>
+                                                </div>
+                                            </div>
+                                            <div class="floating-content__bottom-left floating-content__bottom-left--style2"
+                                                data-aos="fade-left" data-aos-duration="1000">
+                                                <div
+                                                    class="floating-content__item floating-content__item--style3  d-flex align-items-center">
+                                                    <h3 class="style2"> <span class="purecounter"
+                                                            data-purecounter-start="0"
+                                                            data-purecounter-end="28">10M</span>M
+                                                    </h3>
+                                                    <p class="ms-3 style2">Available for loan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature__shape">
+            <span class="feature__shape-item feature__shape-item--1"><img src="/ui_assets/images/feature/shape/1.png"
+                    alt="shape-icon"></span>
+            <span class="feature__shape-item feature__shape-item--2"> <span></span> </span>
+        </div>
+    </section>
+    <!-- ===============>> feature section end here <<================= -->
+
+
+
+
+    <!-- ===============>> Service section start here <<================= -->
+    <section class="service padding-top padding-bottom">
+        <div class="section-header section-header--max50">
+            <h2 class="mb-15 mt-minus-5"><span>services </span>We offer</h2>
+            <p>We offer the best services</p>
+        </div>
+        <div class="container">
+            <div class="service__wrapper">
+                <div class="row g-4 align-items-center">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="service__item" data-aos="fade-up" data-aos-duration="800">
+                            <div class="service__item-inner text-center">
+                                <div class="service__thumb mb-30">
+                                    <div class="service__thumb-inner">
+                                        <img class="dark" src="/ui_assets/images/service/1.png" alt="service-icon">
+                                    </div>
+                                </div>
+                                <div class="service__content">
+                                    <h5 class="mb-15"> <a class="stretched-link" href="#">Tailored Investment
+                                            Solutions</a> </h5>
+                                    <p class="mb-0">We understand that each investor has unique goals and risk
+                                        tolerance. That's why {{ config('app.name') }} provides personalized investment
+                                        solutions that align with your preferences. Whether you're seeking long-term
+                                        growth or short-term gains, our platform offers diverse investment strategies to
+                                        suit your needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="service__item" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="service__item-inner text-center">
+                                <div class="service__thumb mb-30">
+                                    <div class="service__thumb-inner">
+                                        <img class="dark" src="/ui_assets/images/service/2.png" alt="service-icon">
+                                    </div>
+                                </div>
+                                <div class="service__content">
+                                    <h5 class="mb-15"> <a class="stretched-link"
+                                            href="service-details.html">Automated Portfolio Management</a> </h5>
+                                    <p class="mb-0">Managing your crypto portfolio has never been easier.
+                                        {{ config('app.name') }}'s cutting-edge algorithms automate the portfolio
+                                        management process, continuously analyzing market trends and rebalancing your
+                                        investments to maximize potential returns. Sit back and let our technology do
+                                        the work for you.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="service__item" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="service__item-inner text-center">
+                                <div class="service__thumb mb-30">
+                                    <div class="service__thumb-inner">
+                                        <img class="dark" src="/ui_assets/images/service/3.png" alt="service-icon">
+                                    </div>
+                                </div>
+                                <div class="service__content">
+                                    <h5 class="mb-15"> <a class="stretched-link" href="#">Access to Leading
+                                            Assets</a> </h5>
+                                    <p class="mb-0">Diversification is the key to successful investing. With
+                                        {{ config('app.name') }}, you have access to a wide array of leading
+                                        cryptocurrencies, including Bitcoin, Ethereum, and other prominent altcoins.
+                                        Explore new investment opportunities and build a diversified portfolio tailored
+                                        to your risk appetite.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="service__item" data-aos="fade-up" data-aos-duration="800">
+                            <div class="service__item-inner text-center">
+                                <div class="service__thumb mb-30">
+                                    <div class="service__thumb-inner">
+                                        <img class="dark" src="/ui_assets/images/service/4.png" alt="service-icon">
+                                    </div>
+                                </div>
+                                <div class="service__content">
+                                    <h5 class="mb-15"> <a class="stretched-link" href="#">Transparent
+                                            Investment Tracking</a>
+                                    </h5>
+                                    <p class="mb-0">Stay on top of your investments with our real-time tracking and
+                                        reporting tools. Monitor the performance of your portfolio, track historical
+                                        gains, and get a clear overview of your investment journey. Our transparent
+                                        approach ensures you always have a clear picture of your investment progress.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="service__item" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="service__item-inner text-center">
+                                <div class="service__thumb mb-30">
+                                    <div class="service__thumb-inner">
+                                        <img class="dark" src="/ui_assets/images/service/5.png" alt="service-icon">
+                                    </div>
+                                </div>
+                                <div class="service__content">
+                                    <h5 class="mb-15"> <a class="stretched-link" href="#">Dedicated
+                                            Support</a> </h5>
+                                    <p class="mb-0">We value our users and are committed to providing exceptional
+                                        customer support. Our knowledgeable team is available round-the-clock to assist
+                                        you with any questions or concerns you may have. Whether it's technical
+                                        assistance or investment guidance, we're here to support you every step of the
+                                        way.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="service__item" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="service__item-inner text-center">
+                                <div class="service__thumb mb-30">
+                                    <div class="service__thumb-inner">
+                                        <img class="dark" src="/ui_assets/images/service/6.png" alt="service-icon">
+                                    </div>
+                                </div>
+                                <div class="service__content">
+                                    <h5 class="mb-15"> <a class="stretched-link" href="#">Regualr Market
+                                            Insight</a>
+                                    </h5>
+                                    <p class="mb-0">Stay ahead of the game with our regular market insights and
+                                        analysis. Receive updates on the latest trends, news, and developments in the
+                                        cryptocurrency space. Our expertly curated market reports help you make
+                                        well-informed investment choices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===============>> Service section start here <<================= -->
+
+
+
+    <!-- ===============>> Pricing section start here <<================= -->
+    {{-- <section class="pricing padding-top padding-bottom">
+        <div class="section-header section-header--max50">
+            <h2 class="mb-15 mt-minus-5">Our <span>pricings </span>plan</h2>
+            <p>We offer the best investment plans</p>
+        </div>
+        <div class="container">
+            <div class="pricing__wrapper">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pricing__item" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="pricing__item-inner">
+                                <div class="pricing__item-content">
+
+                                    <!-- pricing top part -->
+                                    <div class="pricing__item-top">
+                                        <h6 class="mb-15">Basic</h6>
+                                        <h3 class="mb-25">$99/<span>Monthly</span> </h3>
+                                    </div>
+
+                                    <!-- pricing middle part -->
+                                    <div class="pricing__item-middle">
+                                        <ul class="pricing__list">
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Weekly online meeting</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Unlimited learning access</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                24/7 technical support</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Personal training</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <!-- pricing bottom part -->
+                                    <div class="pricing__item-bottom">
+                                        <a href="signup.html" class="trk-btn trk-btn--outline">Choose Plan</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pricing__item " data-aos="fade-up" data-aos-duration="1000">
+                            <div class="pricing__item-inner active">
+                                <div class="pricing__item-content">
+
+                                    <!-- pricing top part -->
+                                    <div class="pricing__item-top">
+                                        <h6 class="mb-15">standard</h6>
+                                        <h3 class="mb-25">$149/<span>Monthly</span> </h3>
+                                    </div>
+
+                                    <!-- pricing middle part -->
+                                    <div class="pricing__item-middle">
+                                        <ul class="pricing__list">
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Weekly online meeting</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Unlimited learning access</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                24/7 technical support</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Personal training</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Business analysis</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <!-- pricing bottom part -->
+                                    <div class="pricing__item-bottom">
+                                        <a href="signup.html" class="trk-btn trk-btn--outline active">Choose Plan</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pricing__item" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="pricing__item-inner">
+                                <div class="pricing__item-content">
+
+                                    <!-- pricing top part -->
+                                    <div class="pricing__item-top">
+                                        <h6 class="mb-15">premium</h6>
+                                        <h3 class="mb-25">$199/<span>Monthly</span> </h3>
+                                    </div>
+
+                                    <!-- pricing middle part -->
+                                    <div class="pricing__item-middle">
+                                        <ul class="pricing__list">
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                With all standard features</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Unlimited learning access</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                24/7 technical support</li>
+                                            <li class="pricing__list-item"><span><img
+                                                        src="/ui_assets/images/icon/check.svg" alt="check"
+                                                        class="dark"></span>
+                                                Personal training</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <!-- pricing bottom part -->
+                                    <div class="pricing__item-bottom">
+                                        <a href="signup.html" class="trk-btn trk-btn--outline">Choose Plan</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pricing__shape">
+            <span class="pricing__shape-item pricing__shape-item--1"> <span></span> </span>
+            <span class="pricing__shape-item pricing__shape-item--2"> <img src="/ui_assets/images/icon/1.png"
+                    alt="shape-icon">
+            </span>
+        </div>
+    </section> --}}
+    <!-- ===============>> Pricing section start here <<================= -->
+
+
+
+
+
+    <!-- ===============>> Team section start here <<================= -->
+    <section class="team padding-top padding-bottom bg-color">
+        <div class="section-header section-header--max50">
+            <h2 class="mb-15 mt-minus-5">Meet our <span>advisers</span></h2>
+            <p>Hey everyone, meet our amazing advisers! They're here to help and guide us through anything.</p>
+        </div>
+        <div class="container">
+            <div class="team__wrapper">
+                <div class="row g-4 align-items-center">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="team__item team__item--shape" data-aos="fade-up" data-aos-duration="800">
+                            <div class="team__item-inner team__item-inner--shape">
+                                <div class="team__item-thumb team__item-thumb--style1">
+                                    <img src="/ui_assets/images/team/1.png" alt="Team Image" class="dark">
+                                </div>
+                                <div class="team__item-content team__item-content--style1">
+                                    <div class="team__item-author team__item-author--style1">
+                                        <div class="team__item-authorinfo">
+                                            <h6 class="mb-1"><a href="team-details.html"
+                                                    class="stretched-link">Dianne Russell</a> </h6>
+                                            <p class="mb-0">Trade Captain</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="team__item team__item--shape" data-aos="fade-up" data-aos-duration="900">
+                            <div class="team__item-inner team__item-inner--shape">
+                                <div class="team__item-thumb team__item-thumb--style1">
+                                    <img src="/ui_assets/images/team/2.png" alt="Team Image" class="dark">
+                                </div>
+                                <div class="team__item-content team__item-content--style1">
+                                    <div class="team__item-author team__item-author--style1">
+                                        <div class="team__item-authorinfo">
+                                            <h6 class="mb-1"><a href="team-details.html"
+                                                    class="stretched-link">Theresa Webb</a> </h6>
+                                            <p class="mb-0">Strategic Advisor</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="team__item team__item--shape" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="team__item-inner team__item-inner--shape">
+                                <div class="team__item-thumb team__item-thumb--style1">
+                                    <img src="/ui_assets/images/team/3.png" alt="Team Image" class="dark">
+                                </div>
+                                <div class="team__item-content team__item-content--style1">
+                                    <div class="team__item-author team__item-author--style1">
+                                        <div class="team__item-authorinfo">
+                                            <h6 class="mb-1"><a href="team-details.html"
+                                                    class="stretched-link">Courtney Henry</a> </h6>
+                                            <p class="mb-0">Management Consultant</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="team__item team__item--shape" data-aos="fade-up" data-aos-duration="1100">
+                            <div class="team__item-inner team__item-inner--shape">
+                                <div class="team__item-thumb team__item-thumb--style1">
+                                    <img src="/ui_assets/images/team/4.png" alt="Team Image" class="dark">
+                                </div>
+                                <div class="team__item-content team__item-content--style1">
+                                    <div class="team__item-author team__item-author--style1">
+                                        <div class="team__item-authorinfo">
+                                            <h6 class="mb-1"><a href="team-details.html"
+                                                    class="stretched-link">Albert Flores</a> </h6>
+                                            <p class="mb-0">Development Specialist</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="team__item team__item--shape" data-aos="fade-up" data-aos-duration="800">
+                            <div class="team__item-inner team__item-inner--shape">
+                                <div class="team__item-thumb team__item-thumb--style1">
+                                    <img src="/ui_assets/images/team/5.png" alt="Team Image" class="dark">
+                                </div>
+                                <div class="team__item-content team__item-content--style1">
+                                    <div class="team__item-author team__item-author--style1">
+                                        <div class="team__item-authorinfo">
+                                            <h6 class="mb-1"><a href="team-details.html"
+                                                    class="stretched-link">Darrell Steward</a> </h6>
+                                            <p class="mb-0">Growth Strategist</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="team__item team__item--shape" data-aos="fade-up" data-aos-duration="900">
+                            <div class="team__item-inner team__item-inner--shape">
+                                <div class="team__item-thumb team__item-thumb--style1">
+                                    <img src="/ui_assets/images/team/6.png" alt="Team Image" class="dark">
+                                </div>
+                                <div class="team__item-content team__item-content--style1">
+                                    <div class="team__item-author team__item-author--style1">
+                                        <div class="team__item-authorinfo">
+                                            <h6 class="mb-1"><a href="team-details.html"
+                                                    class="stretched-link">Wade Warren</a> </h6>
+                                            <p class="mb-0">Trade Consultant</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="team__item team__item--shape" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="team__item-inner team__item-inner--shape">
+                                <div class="team__item-thumb team__item-thumb--style1">
+                                    <img src="/ui_assets/images/team/7.png" alt="Team Image" class="dark">
+                                </div>
+                                <div class="team__item-content team__item-content--style1">
+                                    <div class="team__item-author team__item-author--style1">
+                                        <div class="team__item-authorinfo">
+                                            <h6 class="mb-1"><a href="team-details.html"
+                                                    class="stretched-link">Cody Fisher</a> </h6>
+                                            <p class="mb-0">HR Consultant</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="team__item team__item--shape" data-aos="fade-up" data-aos-duration="1100">
+                            <div class="team__item-inner team__item-inner--shape">
+                                <div class="team__item-thumb team__item-thumb--style1">
+                                    <img src="/ui_assets/images/team/8.png" alt="Team Image" class="dark">
+                                </div>
+                                <div class="team__item-content team__item-content--style1">
+                                    <div class="team__item-author team__item-author--style1">
+                                        <div class="team__item-authorinfo">
+                                            <h6 class="mb-1"><a href="team-details.html"
+                                                    class="stretched-link">Bessie Cooper</a> </h6>
+                                            <p class="mb-0">Financial Advisor</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="team.html" class="trk-btn trk-btn--border trk-btn--primary mt-25">View more </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===============>> Team section start here <<================= -->
+
+
+    <!-- ===============>> Testimonial section start here <<================= -->
+    <section class="testimonial padding-top padding-bottom-style2 bg-color">
+        <div class="container">
+            <div class="section-header d-md-flex align-items-center justify-content-between">
+                <div class="section-header__content">
+                    <h2 class="mb-15">connect with <span>our Clients </span></h2>
+                    <p class="mb-0">We love connecting with our clients to hear about their experiences and how we
+                        can improve.
+                    </p>
+                </div>
+                <div class="section-header__action">
+                    <div class="swiper-nav">
+                        <button class="swiper-nav__btn testimonial__slider-prev"><i
+                                class="fa-solid fa-angle-left"></i></button>
+                        <button class="swiper-nav__btn testimonial__slider-next active"><i
+                                class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial__wrapper" data-aos="fade-up" data-aos-duration="1000">
+                <div class="testimonial__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial__item testimonial__item--style1">
+                                <div class="testimonial__item-inner">
+                                    <div class="testimonial__item-content">
+                                        <p class="mb-0">
+                                            "I've been a part of the {{ config('app.name') }} community for over a year
+                                            now, and I must say, it's been an incredible journey. As someone new to the
+                                            world of cryptocurrencies, I was initially hesitant about investing.
+                                            However, {{ config('app.name') }}'s educational resources and personalized
+                                            investment recommendations helped me gain the confidence I needed. Their
+                                            user-friendly platform made it easy for me to diversify my portfolio, and
+                                            the results have been fantastic! Thanks to {{ config('app.name') }}, I've
+                                            seen significant growth in my investments and look forward to a bright
+                                            financial future."
+                                        </p>
+                                        <div class="testimonial__footer">
+                                            <div class="testimonial__author">
+                                                <div class="testimonial__author-thumb">
+                                                    <img src="/ui_assets/images/testimonial/1.png" alt="author">
+                                                </div>
+                                                <div class="testimonial__author-designation">
+                                                    <h6>John D</h6>
+                                                    <span>Successful Investor</span>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial__quote">
+                                                <span><i class="fa-solid fa-quote-right"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial__item testimonial__item--style1">
+                                <div class="testimonial__item-inner">
+                                    <div class="testimonial__item-content">
+                                        <p class="mb-0">
+                                            "I cannot emphasize enough how impressed I am with
+                                            {{ config('app.name') }}'s commitment to security. With so many horror
+                                            stories about hacks and scams in the crypto world, I was hesitant to invest.
+                                            But {{ config('app.name') }}'s advanced security features and transparent
+                                            approach put my worries to rest. I feel confident knowing that my
+                                            investments are safe with {{ config('app.name') }}, and their responsive
+                                            customer support team has been a great help whenever I had any questions."
+                                        </p>
+                                        <div class="testimonial__footer">
+                                            <div class="testimonial__author">
+                                                <div class="testimonial__author-thumb">
+                                                    <img src="/ui_assets/images/testimonial/2.png" alt="author">
+                                                </div>
+                                                <div class="testimonial__author-designation">
+                                                    <h6>Travis L.</h6>
+                                                    <span>Manager</span>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial__quote">
+                                                <span><i class="fa-solid fa-quote-right"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial__item testimonial__item--style1">
+                                <div class="testimonial__item-inner">
+                                    <div class="testimonial__item-content">
+                                        <p class="mb-0">
+                                            "{{ config('app.name') }} has truly made crypto investing a breeze. I'm a
+                                            busy professional with limited time to manage my investments actively.
+                                            {{ config('app.name') }}'s automated portfolio management has been a
+                                            game-changer for me. It continuously adjusts my portfolio based on market
+                                            trends, ensuring I stay on track with my financial goals. The platform's
+                                            user interface is intuitive, and the overall experience has been smooth and
+                                            hassle-free. I recommend {{ config('app.name') }} to anyone looking for a
+                                            stress-free way to invest in cryptocurrencies."
+                                        </p>
+                                        <div class="testimonial__footer">
+                                            <div class="testimonial__author">
+                                                <div class="testimonial__author-thumb">
+                                                    <img src="/ui_assets/images/testimonial/6.png" alt="author">
+                                                </div>
+                                                <div class="testimonial__author-designation">
+                                                    <h6>Michael S</h6>
+                                                    <span>Developer</span>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial__quote">
+                                                <span><i class="fa-solid fa-quote-right"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===============>> Testimonial section start here <<================= -->
+
+
+
+
+    <!-- ===============>> FAQ section start here <<================= -->
+    <section class="faq padding-top padding-bottom of-hidden">
+        <div class="section-header section-header--max65">
+            <h2 class="mb-15 mt-minus-5"><span>Frequently</span> Asked questions</h2>
+            <p>Hey there! Got questions? We've got answers. Check out our FAQ page for all the deets. Still not
+                satisfied? Hit
+                us up.</p>
+        </div>
+        <div class="container">
+            <div class="faq__wrapper">
+                <div class="row g-5 align-items-center justify-content-between">
+                    <div class="col-lg-6">
+                        <div class="accordion accordion--style1" id="faqAccordion1" data-aos="fade-right"
+                            data-aos-duration="1000">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="accordion__item ">
+                                        <div class="accordion__header" id="faq1">
+                                            <button class="accordion__button" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody1"
+                                                aria-expanded="false" aria-controls="faqBody1">
+                                                <span class="accordion__button-content">What is
+                                                    {{ config('app.name') }}?</span>
+                                                <span class="accordion__button-plusicon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody1" class="accordion-collapse collapse show"
+                                            aria-labelledby="faq1" data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                                <p class="mb-15">
+                                                    {{ config('app.name') }} is an online crypto investment platform
+                                                    that provides users with the tools and resources to invest in
+                                                    cryptocurrencies. We offer a user-friendly interface, diversified
+                                                    investment options, and automated portfolio management to help you
+                                                    achieve your financial goals in the dynamic world of
+                                                    cryptocurrencies.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item ">
+                                        <div class="accordion__header" id="faq2">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody2"
+                                                aria-expanded="true" aria-controls="faqBody2">
+                                                <span class="accordion__button-content">Is {{ config('app.name') }}
+                                                    secured ?</span>
+                                                <span class="accordion__button-plusicon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody2" class="accordion-collapse collapse"
+                                            aria-labelledby="faq2" data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                                <p class="mb-15">
+                                                    Yes, security is our top priority. {{ config('app.name') }} employs
+                                                    advanced encryption, multi-factor authentication, and secure storage
+                                                    to safeguard your funds and personal information. We are committed
+                                                    to maintaining a secure and trusted platform for all our users.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item ">
+                                        <div class="accordion__header" id="faq3">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody3"
+                                                aria-expanded="false" aria-controls="faqBody3">
+                                                <span class="accordion__button-content"> How does
+                                                    {{ config('app.name') }}'s automated portfolio management
+                                                    work?</span>
+                                                <span class="accordion__button-plusicon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody3" class="accordion-collapse collapse"
+                                            aria-labelledby="faq3" data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                                <p class="mb-15"> Our automated portfolio management uses
+                                                    sophisticated algorithms to analyze market trends and historical
+                                                    data. It then rebalances your investments to optimize potential
+                                                    returns. This ensures that your portfolio stays on track with your
+                                                    investment objectives..</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item ">
+                                        <div class="accordion__header" id="faq4">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody4"
+                                                aria-expanded="false" aria-controls="faqBody4">
+                                                <span class="accordion__button-content">Can I withdraw my profits at
+                                                    any time?</span>
+                                                <span class="accordion__button-plusicon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody4" class="accordion-collapse collapse"
+                                            aria-labelledby="faq4" data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                                <p class="mb-15">Yes, you can withdraw your profits at any time.
+                                                    {{ config('app.name') }} offers a seamless and straightforward
+                                                    withdrawal process to ensure you can access your funds whenever you
+                                                    need them.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item ">
+                                        <div class="accordion__header" id="faq5">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody5"
+                                                aria-expanded="false" aria-controls="faqBody5">
+                                                <span class="accordion__button-content"> How do I get started with
+                                                    {{ config('app.name') }}?</span>
+                                                <span class="accordion__button-plusicon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody5" class="accordion-collapse collapse"
+                                            aria-labelledby="faq5" data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                                <p class="mb-15"> Getting started with {{ config('app.name') }} is
+                                                    easy! Simply sign up for an account, complete the verification
+                                                    process, and make your first deposit. From there, you can explore
+                                                    investment options, set your preferences, and start building your
+                                                    crypto portfolio.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="accordion__item border-0">
+                                        <div class="accordion__header" id="faq6">
+                                            <button class="accordion__button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqBody6"
+                                                aria-expanded="false" aria-controls="faqBody6">
+                                                <span class="accordion__button-content">Can I track the performance of
+                                                    my Investment ?</span>
+                                                <span class="accordion__button-plusicon"></span>
+                                            </button>
+                                        </div>
+                                        <div id="faqBody6" class="accordion-collapse collapse"
+                                            aria-labelledby="faq6" data-bs-parent="#faqAccordion1">
+                                            <div class="accordion__body">
+                                                <p class="mb-15"> Absolutely! {{ config('app.name') }} provides
+                                                    real-time tracking and reporting tools to help you monitor the
+                                                    performance of your portfolio. You can track historical gains, view
+                                                    market insights, and get a clear overview of your investment
+                                                    progress.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="faq__thumb faq__thumb--style1" data-aos="fade-left" data-aos-duration="1000">
+                            <img class="dark" src="/ui_assets/images/others/1.png" alt="faq-thumb">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faq__shape faq__shape--style1">
+            <span class="faq__shape-item faq__shape-item--1"><img src="/ui_assets/images/others/2.png"
+                    alt="shpae-icon"></span>
+        </div>
+    </section>
+    <!-- ===============>> FAQ section start here <<================= -->
+
+
+
+
+
+    <!-- ===============>> cta section start here <<================= -->
+    <section class="cta padding-top padding-bottom  bg-color">
+        <div class="container">
+            <div class="cta__wrapper">
+                <div class="cta__newsletter justify-content-center">
+                    <div class="cta__newsletter-inner" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="cta__thumb">
+                            <img src="/ui_assets/images/cta/3.png" alt="cta-thumb">
+                        </div>
+                        <div class="cta__subscribe">
+                            <h2> <span>Subscribe</span> our news</h2>
+                            <p>Hey! Are you tired of missing out on our updates? Subscribe to our news now and stay in
+                                the loop!</p>
+                            <form class="cta-form cta-form--style2 form-subscribe" action="#">
+                                <div class="cta-form__inner d-sm-flex align-items-center">
+                                    <input type="email" class="form-control form-control--style2 mb-3 mb-sm-0"
+                                        placeholder="Email Address">
+                                    <button class="trk-btn  trk-btn--large trk-btn--secondary2"
+                                        type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta__shape">
+                    <span class="cta__shape-item cta__shape-item--1"><img src="/ui_assets/images/cta/2.png"
+                            alt="shape icon"></span>
+                    <span class="cta__shape-item cta__shape-item--2"><img src="/ui_assets/images/cta/4.png"
+                            alt="shape icon"></span>
+                    <span class="cta__shape-item cta__shape-item--3"><img src="/ui_assets/images/cta/5.png"
+                            alt="shape icon"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===============>> cta section start here <<================= -->
+
+
+
+
+
+    <!-- ===============>> footer start here <<================= -->
+    <footer class="footer brand-1">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__top footer__top--style1">
+                    <div class="row gy-5 gx-4">
+                        <div class="col-md-6">
+                            <div class="footer__about">
+                                <a href="index.html" class="footer__about-logo">
+                                    <x-application-logo/>
+                                </a>
+                                <p class="footer__about-moto">Welcome to {{ config('app.name') }} - Your Gateway to
+                                    Crypto Investment Success! We provide a secure and user-friendly platform to invest
+                                    in cryptocurrencies. Our automated portfolio management and expert insights help you
+                                    achieve your financial goals.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6">
+                            <div class="footer__links">
+                                <div class="footer__links-tittle">
+                                    <h6>Quick links</h6>
+                                </div>
+                                <div class="footer__links-content">
+                                    <ul class="footer__linklist">
+                                        <li class="footer__linklist-item"> <a href="about.html">About Us</a>
+                                        </li>
+                                        <li class="footer__linklist-item"> <a href="team.html">Teams</a>
+                                        </li>
+                                        <li class="footer__linklist-item"> <a href="service.html">Services</a> </li>
+                                        <li class="footer__linklist-item"> <a href="#">Features</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6">
+                            <div class="footer__links">
+                                <div class="footer__links-tittle">
+                                    <h6>Support</h6>
+                                </div>
+                                <div class="footer__links-content">
+                                    <ul class="footer__linklist">
+                                        <li class="footer__linklist-item"> <a href="#">Terms & Conditions</a>
+                                        </li>
+                                        <li class="footer__linklist-item"> <a href="#">Privacy Policy</a>
+                                        </li>
+                                        <li class="footer__linklist-item"> <a href="#">FAQs</a></li>
+                                        <li class="footer__linklist-item"> <a href="#">Support Center</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="footer__links">
+                                <div class="footer__links-tittle">
+                                    <h6>Company</h6>
+                                </div>
+                                <div class="footer__links-content">
+                                    <ul class="footer__linklist">
+                                        <li class="footer__linklist-item"> <a href="#">Careers</a>
+                                        </li>
+                                        <li class="footer__linklist-item"> <a href="#">Updates</a>
+                                        </li>
+                                        <li class="footer__linklist-item"> <a href="#">Job</a> </li>
+                                        <li class="footer__linklist-item"> <a href="#">Announce</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__end">
+                        <div class="footer__end-copyright">
+                            <p class="mb-0">© 2023 All Rights Reserved By <a href="/"
+                                    target="_blank">{{ config('app.name') }}</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__shape">
+            <span class="footer__shape-item footer__shape-item--1"><img src="/ui_assets/images/footer/1.png"
+                    alt="shape icon"></span>
+            <span class="footer__shape-item footer__shape-item--2"> <span></span> </span>
+        </div>
+    </footer>
+    <!-- ===============>> footer end here <<================= -->
+
+
+
+    <!-- ===============>> scrollToTop start here <<================= -->
+    <a href="#" class="scrollToTop scrollToTop--home1"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+    <!-- ===============>> scrollToTop ending here <<================= -->
+
+
+    <!-- vendor plugins -->
+
+    <script src="/ui_assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/ui_assets/js/all.min.js"></script>
+    <script src="/ui_assets/js/swiper-bundle.min.js"></script>
+    <script src="/ui_assets/js/aos.js"></script>
+    <script src="/ui_assets/js/fslightbox.js"></script>
+    <script src="/ui_assets/js/purecounter_vanilla.js"></script>
+
+
+
+    <script src="/ui_assets/js/custom.js"></script>
+
+
+</body>
+
 </html>
