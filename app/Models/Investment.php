@@ -56,6 +56,12 @@ class Investment extends Model
         return $this->save();
     }
 
+    public function profitIsDue()
+    {
+        if(!$this->plan->profit_interval) return;
+        return now()->subSeconds($this->plan->profit_interval)->greaterThan($this->updated_at);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -5,7 +5,9 @@ use App\Http\Controllers\Admin\InvestmentController as AdminInvestmentController
 use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\TransactionController as AdminTransactionController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\AutoInvestController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvestmentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
@@ -24,9 +26,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', HomeController::class);
 
 Route::middleware(['auth', 'verified', 'suspend'])->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
@@ -46,6 +46,7 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('plans', PlanController::class);
     Route::resource('assets', AssetController::class);
     Route::resource('users', UserController::class);
+    Route::resource('auto-invest', AutoInvestController::class);
 });
 
 require __DIR__.'/auth.php';

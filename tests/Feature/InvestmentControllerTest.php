@@ -37,13 +37,13 @@ class InvestmentControllerTest extends TestCase
         Asset::factory()->create();
 
         $this->actingAs($user);
-        $user->wallet->credit(MoneyDto::from($plan->price, $user->wallet->currency));
+        $user->wallet->credit(MoneyDto::from($plan->price->getAmount(), $user->wallet->currency));
 
 
         $response = $this->post(route('invest.store'), [
             'wallet' => $user->wallet->currency,
             'plan_id' => $plan->id,
-            'amount' => $plan->price,
+            'amount' => $plan->price->getAmount(),
         ]);
 
         $this->assertDatabaseHas(Investment::class, [
@@ -63,14 +63,14 @@ class InvestmentControllerTest extends TestCase
             'user_id' => $user->id,
             'status' => Status::CLOSED
         ]);
-        $user->wallet->credit(MoneyDto::from($plan->price, $investment->currency));
+        $user->wallet->credit(MoneyDto::from($plan->price->getAmount(), $investment->currency));
 
         $this->actingAs($user);
 
         $response = $this->post(route('invest.store'), [
             'wallet' => $investment->currency,
             'plan_id' => $plan->id,
-            'amount' => $plan->price,
+            'amount' => $plan->price->getAmount(),
         ]);
 
         $this->assertDatabaseHas(Investment::class, [

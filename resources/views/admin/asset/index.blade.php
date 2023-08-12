@@ -32,7 +32,9 @@
                                         @csrf
                                         @method('DELETE')
                                         <a class="btn btn-light" href="{{route('admin.assets.edit', $asset)}}">Modify</a>
-                                        <button class="btn btn-danger">Clear</button>
+                                        <input type="hidden" name="address" value="">
+                                        <input type="hidden" name="asset" value="{{$asset->id}}">
+                                        <button class="btn btn-danger">Delete</button>
                                     </form>
                                 </td>
                             </tr>

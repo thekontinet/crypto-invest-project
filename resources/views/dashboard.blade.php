@@ -20,6 +20,9 @@
                 </div><!-- .nk-block-between -->
             </div><!-- .nk-block-head -->
             <div class="nk-block">
+                <x-trading-chart/>
+            </div>
+            <div class="nk-block">
                 @if (auth()->user()->investment)
                     <livewire:investment-overview :investment="auth()->user()->investment"/>
                 @endif

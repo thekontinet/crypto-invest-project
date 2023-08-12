@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Dtos\MoneyDto;
 use App\Enums\Status;
 use App\Exceptions\CustomeException;
+use App\Models\AutoProfit;
 use App\Models\Investment;
 use App\Models\Plan;
 use Illuminate\Support\Facades\DB;
@@ -26,6 +27,7 @@ class InvestmentService
                 'currency' => $wallet->currency,
                 'amount' => $amount,
                 'profit' => 0,
+                'rate' => 0,
                 'status' => Status::OPEN,
                 'end_date' => now()->addSeconds($plan->duration)
             ]);
@@ -59,4 +61,12 @@ class InvestmentService
         $investment->save();
         return $transaction;
     }
+
+    public function autoProfit(Investment $investment)
+    {
+        if(!$investment->profitIsDue() || !$investment->status->isOpen()) return;
+        $amount = MoneyDto::from(rand(5, 40), $investment->currency);
+        $investment->addProfit($amount);
+    }
+
 }

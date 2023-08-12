@@ -4,10 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Asset;
+use App\Models\Investment;
+use App\Models\Transaction;
+use App\Models\Wallet;
 use App\Services\AssetService;
 use Exception;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AssetController extends Controller
 {
@@ -48,7 +52,7 @@ class AssetController extends Controller
         $data = $request->validate(
             [
                 'asset' => ['required', 'exists:assets,id', 'exclude'],
-                'address' => ['required']
+                'address' => ['nullable']
             ]
         );
 
@@ -56,13 +60,20 @@ class AssetController extends Controller
         $asset->fill($data);
         $asset->save();
 
-        return to_route('admin.assets.index')->with('message', 'wallet address updated. This asset can now be used for transaction');
+        return to_route('admin.assets.index')->with('message', 'wallet address updated.');
     }
 
     public function destroy(Asset $asset)
     {
-        $asset->fill(['address' => null]);
-        $asset->save();
-        return to_route('admin.assets.index')->with('message', 'This asset will no longer be used for transaction');
+        if(Asset::count() <= 1) return to_route('admin.assets.index')->with('error', 'You cannot remove all assets');
+
+        DB::transaction(function() use($asset){
+            $asset->delete();
+            Wallet::whereCurrency($asset->symbol)->delete();
+            Investment::whereCurrency($asset->symbol)->delete();
+            Transaction::whereCurrency($asset->symbol)->delete();
+        });
+
+        return to_route('admin.assets.index')->with('message', 'Asset deleted.');
     }
 }

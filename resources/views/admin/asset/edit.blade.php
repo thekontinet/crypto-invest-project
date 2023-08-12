@@ -12,7 +12,7 @@
 
             <div class="form-group">
                 <label for="address">Enter Wallet Address</label>
-                <input type="text" name="address" class="form-control" placeholder="Wallet address here"/>
+                <input type="text" name="address" class="form-control" value="{{old('address', $asset->address)}}" placeholder="Wallet address here"/>
                 <span class="text-danger">{{$errors->first('address')}}</span>
             </div>
 

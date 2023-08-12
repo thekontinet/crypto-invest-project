@@ -136,6 +136,10 @@
                                     GetStarted
                                     <span><i class="fa-solid fa-arrow-right"></i></span>
                                 </a>
+                                <a href="{{ route('login') }}" class="trk-btn trk-btn--secondary trk-btn--arrow">
+                                    Login
+                                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -585,7 +589,7 @@
 
 
     <!-- ===============>> Pricing section start here <<================= -->
-    {{-- <section class="pricing padding-top padding-bottom">
+    <section class="pricing padding-top padding-bottom">
         <div class="section-header section-header--max50">
             <h2 class="mb-15 mt-minus-5">Our <span>pricings </span>plan</h2>
             <p>We offer the best investment plans</p>
@@ -593,6 +597,7 @@
         <div class="container">
             <div class="pricing__wrapper">
                 <div class="row g-4 align-items-center">
+                    @foreach ($plans as $plan)
                     <div class="col-md-6 col-lg-4">
                         <div class="pricing__item" data-aos="fade-right" data-aos-duration="1000">
                             <div class="pricing__item-inner">
@@ -600,129 +605,35 @@
 
                                     <!-- pricing top part -->
                                     <div class="pricing__item-top">
-                                        <h6 class="mb-15">Basic</h6>
-                                        <h3 class="mb-25">$99/<span>Monthly</span> </h3>
+                                        <h6 class="mb-15">{{$plan->title}}</h6>
+                                        <h3 class="mb-25">{{$plan->price->format()}}</h3>
+                                        <p class="mb-15">{{$plan->description}}</p>
                                     </div>
 
                                     <!-- pricing middle part -->
                                     <div class="pricing__item-middle">
                                         <ul class="pricing__list">
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Weekly online meeting</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Unlimited learning access</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                24/7 technical support</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Personal training</li>
+                                            @foreach ($plan->data as $feature)
+                                            <li class="pricing__list-item">
+                                                <span>
+                                                    <img src="/ui_assets/images/icon/check.svg" alt="check" class="dark">
+                                                </span>
+                                                {{$feature}}
+                                            </li>
+                                            @endforeach
                                         </ul>
 
                                     </div>
 
                                     <!-- pricing bottom part -->
                                     <div class="pricing__item-bottom">
-                                        <a href="signup.html" class="trk-btn trk-btn--outline">Choose Plan</a>
+                                        <a href="{{route('invest.edit', $plan->id)}}" class="trk-btn trk-btn--outline">Choose Plan</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="pricing__item " data-aos="fade-up" data-aos-duration="1000">
-                            <div class="pricing__item-inner active">
-                                <div class="pricing__item-content">
-
-                                    <!-- pricing top part -->
-                                    <div class="pricing__item-top">
-                                        <h6 class="mb-15">standard</h6>
-                                        <h3 class="mb-25">$149/<span>Monthly</span> </h3>
-                                    </div>
-
-                                    <!-- pricing middle part -->
-                                    <div class="pricing__item-middle">
-                                        <ul class="pricing__list">
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Weekly online meeting</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Unlimited learning access</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                24/7 technical support</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Personal training</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Business analysis</li>
-                                        </ul>
-
-                                    </div>
-
-                                    <!-- pricing bottom part -->
-                                    <div class="pricing__item-bottom">
-                                        <a href="signup.html" class="trk-btn trk-btn--outline active">Choose Plan</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="pricing__item" data-aos="fade-left" data-aos-duration="1000">
-                            <div class="pricing__item-inner">
-                                <div class="pricing__item-content">
-
-                                    <!-- pricing top part -->
-                                    <div class="pricing__item-top">
-                                        <h6 class="mb-15">premium</h6>
-                                        <h3 class="mb-25">$199/<span>Monthly</span> </h3>
-                                    </div>
-
-                                    <!-- pricing middle part -->
-                                    <div class="pricing__item-middle">
-                                        <ul class="pricing__list">
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                With all standard features</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Unlimited learning access</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                24/7 technical support</li>
-                                            <li class="pricing__list-item"><span><img
-                                                        src="/ui_assets/images/icon/check.svg" alt="check"
-                                                        class="dark"></span>
-                                                Personal training</li>
-                                        </ul>
-
-                                    </div>
-
-                                    <!-- pricing bottom part -->
-                                    <div class="pricing__item-bottom">
-                                        <a href="signup.html" class="trk-btn trk-btn--outline">Choose Plan</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -732,7 +643,7 @@
                     alt="shape-icon">
             </span>
         </div>
-    </section> --}}
+    </section>
     <!-- ===============>> Pricing section start here <<================= -->
 
 
