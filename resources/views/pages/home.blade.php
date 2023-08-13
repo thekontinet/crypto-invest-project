@@ -236,7 +236,7 @@
                                 <h2>Why <span>{{ config('app.name') }}</span></h2>
 
                                 <p class="mb-0">
-                                    ARK identifies more innovation evolving today than ever before. We believe it is
+                                    {{config('app.name')}} identifies more innovation evolving today than ever before. We believe it is
                                     changing lives and businesses across the globe dramatically, creating opportunities
                                     to own the next big thing by investing in the future today.
                                 </p>
@@ -266,8 +266,7 @@
                                 <div class="section-header">
                                     <h2 class="mb-15 mt-minus-5"> <span>benefits </span>We offer</h2>
                                     <p class="mb-0">
-                                        Unlock the full potential of our platform with our amazing features and
-                                        top-notch.
+                                        Unlock the full potential of our platform with our top notch features
                                     </p>
                                 </div>
 
@@ -315,7 +314,7 @@
                                             <div class="feature__item">
                                                 <div class="feature__item-inner">
                                                     <div class="feature__item-content">
-                                                        <h6>all transaction is kept free for all investors
+                                                        <h6>all transactions is kept free for all investors
                                                         </h6>
                                                     </div>
                                                 </div>
@@ -488,7 +487,7 @@
                                 </div>
                                 <div class="service__content">
                                     <h5 class="mb-15"> <a class="stretched-link"
-                                            href="service-details.html">Automated Portfolio Management</a> </h5>
+                                            href="service-details.html">Managing a diversified portfolio</a> </h5>
                                     <p class="mb-0">Managing your crypto portfolio has never been easier.
                                         {{ config('app.name') }}'s cutting-edge algorithms automate the portfolio
                                         management process, continuously analyzing market trends and rebalancing your
@@ -511,9 +510,7 @@
                                     <h5 class="mb-15"> <a class="stretched-link" href="#">Access to Leading
                                             Assets</a> </h5>
                                     <p class="mb-0">Diversification is the key to successful investing. With
-                                        {{ config('app.name') }}, you have access to a wide array of leading
-                                        cryptocurrencies, including Bitcoin, Ethereum, and other prominent altcoins.
-                                        Explore new investment opportunities and build a diversified portfolio tailored
+                                        {{ config('app.name') }}, you have access to a wide array Of leading investment markets be it cryptocurrencies, agriculture, foreign exchange, medicine, robotics and other prominent investment markets. Explore new investment opportunities and build a diversified portfolio tailored
                                         to your risk appetite.</p>
                                 </div>
                             </div>
@@ -553,7 +550,7 @@
                                             Support</a> </h5>
                                     <p class="mb-0">We value our users and are committed to providing exceptional
                                         customer support. Our knowledgeable team is available round-the-clock to assist
-                                        you with any questions or concerns you may have. Whether it's technical
+                                        you with any questions or concerns you may have. Be it technical
                                         assistance or investment guidance, we're here to support you every step of the
                                         way.</p>
                                 </div>
@@ -570,11 +567,11 @@
                                 </div>
                                 <div class="service__content">
                                     <h5 class="mb-15"> <a class="stretched-link" href="#">Regualr Market
-                                            Insight</a>
+                                            Development</a>
                                     </h5>
                                     <p class="mb-0">Stay ahead of the game with our regular market insights and
                                         analysis. Receive updates on the latest trends, news, and developments in the
-                                        cryptocurrency space. Our expertly curated market reports help you make
+                                        crypto & forex market space. Our expertly curated market reports help you make
                                         well-informed investment choices.</p>
                                 </div>
                             </div>
@@ -591,7 +588,7 @@
     <!-- ===============>> Pricing section start here <<================= -->
     <section class="pricing padding-top padding-bottom">
         <div class="section-header section-header--max50">
-            <h2 class="mb-15 mt-minus-5">Our <span>pricings </span>plan</h2>
+            <h2 class="mb-15 mt-minus-5">Our <span>pricing </span>plans</h2>
             <p>We offer the best investment plans</p>
         </div>
         <div class="container">
@@ -654,7 +651,7 @@
     <section class="team padding-top padding-bottom bg-color">
         <div class="section-header section-header--max50">
             <h2 class="mb-15 mt-minus-5">Meet our <span>advisers</span></h2>
-            <p>Hey everyone, meet our amazing advisers! They're here to help and guide us through anything.</p>
+            <p>Hey everyone, meet our amazing advisers! They're here to help and guide you through anything.</p>
         </div>
         <div class="container">
             <div class="team__wrapper">
@@ -688,7 +685,7 @@
                                     <div class="team__item-author team__item-author--style1">
                                         <div class="team__item-authorinfo">
                                             <h6 class="mb-1"><a href="team-details.html"
-                                                    class="stretched-link">Theresa Webb</a> </h6>
+                                                    class="stretched-link">Andrew Porzio</a> </h6>
                                             <p class="mb-0">Strategic Advisor</p>
                                         </div>
                                     </div>
@@ -1138,7 +1135,7 @@
                             <img src="/ui_assets/images/cta/3.png" alt="cta-thumb">
                         </div>
                         <div class="cta__subscribe">
-                            <h2> <span>Subscribe</span> our news</h2>
+                            <h2> <span>Subscribe</span> to our news</h2>
                             <p>Hey! Are you tired of missing out on our updates? Subscribe to our news now and stay in
                                 the loop!</p>
                             <form class="cta-form cta-form--style2 form-subscribe" action="#">
@@ -1178,9 +1175,7 @@
                         <div class="col-md-6">
                             <div class="footer__about">
                                 <h1 class="text-white">{{config('app.name')}}</h1>
-                                <p class="footer__about-moto">Welcome to {{ config('app.name') }} - Your Gateway to
-                                    Crypto Investment Success! We provide a secure and user-friendly platform to invest
-                                    in cryptocurrencies. Our automated portfolio management and expert insights help you
+                                <p class="footer__about-moto">Welcome to {{ config('app.name') }} - Your Gateway to a diversified investment portfolio success. We provide a secure and user- friendly platform to invest in diverse financial market opportunities. Our automated portfolio management and expert insights help you
                                     achieve your financial goals.</p>
                             </div>
                         </div>
