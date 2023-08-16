@@ -487,7 +487,7 @@
                                 </div>
                                 <div class="service__content">
                                     <h5 class="mb-15"> <a class="stretched-link"
-                                            href="service-details.html">Managing a diversified portfolio</a> </h5>
+                                            href="service-details.html">Automated Portfolio Management</a> </h5>
                                     <p class="mb-0">Managing your crypto portfolio has never been easier.
                                         {{ config('app.name') }} cutting-edge algorithms automate the portfolio
                                         management process, continuously analyzing market trends and rebalancing your
@@ -566,12 +566,11 @@
                                     </div>
                                 </div>
                                 <div class="service__content">
-                                    <h5 class="mb-15"> <a class="stretched-link" href="#">Regualr Market
+                                    <h5 class="mb-15"> <a class="stretched-link" href="#">Regular Market
                                             Development</a>
                                     </h5>
                                     <p class="mb-0">Stay ahead of the game with our regular market insights and
-                                        analysis. Receive updates on the latest trends, news, and developments in the
-                                        crypto & forex market space. Our expertly curated market reports help you make
+                                        analysis. Receive updates on the latest trends, news, and developments in the cryptocurrency,stock and forex exchange spaces. Our expertly curated market reports help you make
                                         well-informed investment choices.</p>
                                 </div>
                             </div>
