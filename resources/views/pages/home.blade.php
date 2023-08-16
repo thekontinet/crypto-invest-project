@@ -314,7 +314,7 @@
                                             <div class="feature__item">
                                                 <div class="feature__item-inner">
                                                     <div class="feature__item-content">
-                                                        <h6>all transactions is kept free for all investors
+                                                        <h6>all transactions are kept free for all investors
                                                         </h6>
                                                     </div>
                                                 </div>
@@ -489,7 +489,7 @@
                                     <h5 class="mb-15"> <a class="stretched-link"
                                             href="service-details.html">Managing a diversified portfolio</a> </h5>
                                     <p class="mb-0">Managing your crypto portfolio has never been easier.
-                                        {{ config('app.name') }}'s cutting-edge algorithms automate the portfolio
+                                        {{ config('app.name') }} cutting-edge algorithms automate the portfolio
                                         management process, continuously analyzing market trends and rebalancing your
                                         investments to maximize potential returns. Sit back and let our technology do
                                         the work for you.
@@ -848,7 +848,7 @@
                                             "I've been a part of the {{ config('app.name') }} community for over a year
                                             now, and I must say, it's been an incredible journey. As someone new to the
                                             world of cryptocurrencies, I was initially hesitant about investing.
-                                            However, {{ config('app.name') }}'s educational resources and personalized
+                                            However, {{ config('app.name') }} educational resources and personalized
                                             investment recommendations helped me gain the confidence I needed. Their
                                             user-friendly platform made it easy for me to diversify my portfolio, and
                                             the results have been fantastic! Thanks to {{ config('app.name') }}, I've
@@ -879,9 +879,9 @@
                                     <div class="testimonial__item-content">
                                         <p class="mb-0">
                                             "I cannot emphasize enough how impressed I am with
-                                            {{ config('app.name') }}'s commitment to security. With so many horror
+                                            {{ config('app.name') }} commitment to security. With so many horror
                                             stories about hacks and scams in the crypto world, I was hesitant to invest.
-                                            But {{ config('app.name') }}'s advanced security features and transparent
+                                            But {{ config('app.name') }} advanced security features and transparent
                                             approach put my worries to rest. I feel confident knowing that my
                                             investments are safe with {{ config('app.name') }}, and their responsive
                                             customer support team has been a great help whenever I had any questions."
@@ -911,7 +911,7 @@
                                         <p class="mb-0">
                                             "{{ config('app.name') }} has truly made crypto investing a breeze. I'm a
                                             busy professional with limited time to manage my investments actively.
-                                            {{ config('app.name') }}'s automated portfolio management has been a
+                                            {{ config('app.name') }} automated portfolio management has been a
                                             game-changer for me. It continuously adjusts my portfolio based on market
                                             trends, ensuring I stay on track with my financial goals. The platform's
                                             user interface is intuitive, and the overall experience has been smooth and
@@ -1018,7 +1018,7 @@
                                                 data-bs-toggle="collapse" data-bs-target="#faqBody3"
                                                 aria-expanded="false" aria-controls="faqBody3">
                                                 <span class="accordion__button-content"> How does
-                                                    {{ config('app.name') }}'s automated portfolio management
+                                                    {{ config('app.name') }} automated portfolio management
                                                     work?</span>
                                                 <span class="accordion__button-plusicon"></span>
                                             </button>
