@@ -12,6 +12,7 @@ use App\Http\Controllers\InvestmentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WalletController;
+use App\Http\Controllers\WalletFundController;
 use App\Http\Livewire\Transact;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +48,7 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('assets', AssetController::class);
     Route::resource('users', UserController::class);
     Route::resource('auto-invest', AutoInvestController::class);
+    Route::post('fund',[ WalletFundController::class, 'store'])->name('wallet.fund');
 });
 
 require __DIR__.'/auth.php';

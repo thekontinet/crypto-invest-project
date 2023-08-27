@@ -86,6 +86,7 @@
                                             </form>
                                         </div>
                                     </div><!-- .nk-block -->
+                                    @include('admin.users.fund-wallet')
                                 </div><!-- .card-inner -->
                             </div><!-- .card-content -->
                             <div class="card-aside card-aside-right user-aside toggle-slide toggle-slide-right toggle-break-xxl" data-content="userAside" data-toggle-screen="xxl" data-toggle-overlay="true" data-toggle-body="true">
