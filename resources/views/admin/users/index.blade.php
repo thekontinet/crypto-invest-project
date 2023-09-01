@@ -44,8 +44,12 @@
                                         </div>
                                         <div class="nk-tb-col tb-col-lg">
                                             <ul class="list-status">
+                                                @if ($user->email_verified_at)
                                                 <li><em class="icon text-success ni ni-check-circle"></em> <span>Email</span></li>
-                                                <li><em class="icon ni ni-alert-circle"></em> <span>KYC</span></li>
+                                                @else
+                                                <li><em class="icon text-danger ni ni-check-circle"></em> <span>Email</span></li>
+                                                @endif
+                                                {{-- <li><em class="icon ni ni-alert-circle"></em> <span>KYC</span></li> --}}
                                             </ul>
                                         </div>
                                         <div class="nk-tb-col tb-col-lg">
@@ -60,25 +64,6 @@
                                         </div>
                                         <div class="nk-tb-col nk-tb-col-tools">
                                             <ul class="nk-tb-actions gx-1">
-                                                <li class="nk-tb-action-hidden">
-                                                    <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Wallet">
-                                                        <em class="icon ni ni-wallet-fill"></em>
-                                                    </a>
-                                                </li>
-                                                <li class="nk-tb-action-hidden">
-                                                    <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email">
-                                                        <em class="icon ni ni-mail-fill"></em>
-                                                    </a>
-                                                </li>
-                                                <li class="nk-tb-action-hidden">
-                                                    <form action="{{route('admin.users.update', $user)}}" method="post" onsubmit="return confirm('Are you sure of this action ?')">
-                                                        @csrf
-                                                        @method('PUT')
-                                                        <button name="block" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Suspend / activate">
-                                                            <em class="icon ni ni-user-cross-fill"></em>
-                                                        </button>
-                                                    </form>
-                                                </li>
                                                 <li>
                                                     <div class="drodown">
                                                         <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
